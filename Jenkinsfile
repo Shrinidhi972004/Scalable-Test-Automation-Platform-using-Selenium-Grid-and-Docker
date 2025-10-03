@@ -15,7 +15,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'master', url: 'https://github.com/<your-username>/selenium-grid-demo.git'
+                git branch: 'master', url: 'https://github.com/Shrinidhi972004/Scalable-Test-Automation-Platform-using-Selenium-Grid-and-Docker.git'
             }
         }
 
