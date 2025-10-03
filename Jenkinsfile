@@ -63,10 +63,10 @@ pipeline {
             junit 'target/surefire-reports/*.xml'
         }
         failure {
-            echo "❌ Tests failed. Check ExtentReport.html in artifacts."
+            echo " Tests failed. Check ExtentReport.html in artifacts."
         }
         success {
-            echo "✅ Tests passed. Report archived."
+            echo " Tests passed. Report archived."
         }
     }
 }
