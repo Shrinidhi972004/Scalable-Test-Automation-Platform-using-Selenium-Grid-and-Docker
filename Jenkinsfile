@@ -22,10 +22,11 @@ pipeline {
         stage('Start Selenium Grid') {
             steps {
                 sh '''
-                    echo "Starting Selenium Grid..."
-                    sudo docker-compose -f $DOCKER_COMPOSE_FILE up -d || true
-                    sudo docker-compose -f $DOCKER_COMPOSE_FILE up -d
-                    sleep 15   # wait for hub & nodes to register
+                    echo "🚀 Starting Selenium Grid..."
+                    docker-compose -f $DOCKER_COMPOSE_FILE down -v || true
+                    docker-compose -f $DOCKER_COMPOSE_FILE up -d
+                    echo "⏳ Waiting for Grid to initialize..."
+                    sleep 15
                 '''
             }
         }
@@ -33,7 +34,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
-                    echo "Running Maven Tests..."
+                    echo "▶️ Running Maven Tests..."
                     mvn clean test
                 '''
             }
@@ -42,7 +43,7 @@ pipeline {
         stage('Stop Selenium Grid') {
             steps {
                 sh '''
-                    echo "Stopping Selenium Grid..."
+                    echo "🛑 Stopping Selenium Grid..."
                     docker-compose -f $DOCKER_COMPOSE_FILE down -v
                 '''
             }
@@ -63,10 +64,10 @@ pipeline {
             junit 'target/surefire-reports/*.xml'
         }
         failure {
-            echo " Tests failed. Check ExtentReport.html in artifacts."
+            echo "❌ Tests failed. Check ExtentReport.html in artifacts."
         }
         success {
-            echo " Tests passed. Report archived."
+            echo "✅ Tests passed. Report archived."
         }
     }
 }
