@@ -41,17 +41,17 @@ This project demonstrates a production-ready test automation platform designed f
 ## 🏗️ Architecture
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Jenkins       │    │  Selenium Hub   │    │   Test Reports  │
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   Jenkins       │     │  Selenium Hub   │     │   Test Reports  │
 │   Pipeline      │───▶│  (Port 4444)    │───▶│  ExtentReports  │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-                                │
-                    ┌───────────┴───────────┐
-                    │                       │
-            ┌───────▼──────┐      ┌────────▼────────┐
-            │ Chrome Node  │      │ Firefox Node    │
-            │ Container    │      │ Container       │
-            └──────────────┘      └─────────────────┘
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+                                 │
+                     ┌───────────┴───────────┐
+                     │                       │
+             ┌───────▼──────┐       ┌────────▼────────┐
+             │ Chrome Node  │       │ Firefox Node    │
+             │ Container    │       │ Container       │
+             └──────────────┘       └─────────────────┘
 ```
 
 ## ✨ Features
