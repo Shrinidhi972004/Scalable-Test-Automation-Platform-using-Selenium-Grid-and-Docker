@@ -23,8 +23,8 @@ pipeline {
             steps {
                 sh '''
                     echo "Starting Selenium Grid..."
-                    docker-compose -f $DOCKER_COMPOSE_FILE down -v || true
-                    docker-compose -f $DOCKER_COMPOSE_FILE up -d
+                    sudo docker-compose -f $DOCKER_COMPOSE_FILE up -d || true
+                    sudo docker-compose -f $DOCKER_COMPOSE_FILE up -d
                     sleep 15   # wait for hub & nodes to register
                 '''
             }
