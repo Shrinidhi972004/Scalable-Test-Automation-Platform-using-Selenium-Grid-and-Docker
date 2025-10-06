@@ -1,4 +1,4 @@
-# 🚀 Scalable Test Automation Platform using Selenium Grid and Docker
+# Scalable Test Automation Platform using Selenium Grid and Docker
 
 A robust, scalable test automation framework leveraging Selenium Grid with Docker containerization for cross-browser testing, featuring Jenkins CI/CD integration and comprehensive reporting.
 
@@ -9,7 +9,7 @@ A robust, scalable test automation framework leveraging Selenium Grid with Docke
 ![Maven](https://img.shields.io/badge/Maven-Build-yellow)
 ![Jenkins](https://img.shields.io/badge/Jenkins-CI/CD-lightblue)
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Architecture](#architecture)
@@ -25,7 +25,7 @@ A robust, scalable test automation framework leveraging Selenium Grid with Docke
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 
-## 🎯 Overview
+## Overview
 
 This project demonstrates a production-ready test automation platform designed for scalability and maintainability. It uses Selenium Grid to enable parallel test execution across multiple browsers and environments, containerized with Docker for consistent deployment.
 
@@ -38,7 +38,7 @@ This project demonstrates a production-ready test automation platform designed f
 - **Screenshot capture** on test failures
 - **TestNG framework** for test organization
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -54,9 +54,9 @@ This project demonstrates a production-ready test automation platform designed f
             └──────────────┘      └─────────────────┘
 ```
 
-## ✨ Features
+## Features
 
-### 🔧 Test Framework Features
+### Test Framework Features
 - **Page Object Model** design pattern
 - **Data-driven testing** capabilities
 - **Cross-browser testing** (Chrome, Firefox)
@@ -64,20 +64,20 @@ This project demonstrates a production-ready test automation platform designed f
 - **Test retry mechanism**
 - **Custom reporting**
 
-### 🐳 DevOps Features
+### DevOps Features
 - **Docker containerization**
 - **Jenkins CI/CD pipeline**
 - **Automated test execution**
 - **Report archival and publishing**
 - **Environment cleanup**
 
-### 📊 Reporting Features
+### Reporting Features
 - **ExtentReports** with detailed test results
 - **Screenshot capture** on failures
 - **Test execution timeline**
 - **Browser-wise test distribution**
 
-## 📋 Prerequisites
+## Prerequisites
 
 ### Required Software:
 - **Java 11** or higher
@@ -94,7 +94,7 @@ docker --version
 docker-compose --version
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -127,28 +127,28 @@ mvn clean test
 open target/ExtentReport.html
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 selenium-grid-demo/
-├── 📄 README.md                    # Project documentation
-├── 🐳 docker-compose.yml           # Selenium Grid configuration
-├── 🔧 Jenkinsfile                  # CI/CD pipeline definition
-├── 📦 pom.xml                      # Maven dependencies
-├── 🧪 testng.xml                   # TestNG suite configuration
-├── 📂 src/
-│   ├── 📂 main/java/com/testing/
-│   │   └── 📄 App.java              # Main application class
-│   └── 📂 test/java/com/testing/
-│       ├── 📄 SwagLabsTest.java     # Test scenarios
-│       └── 📄 ExtentManager.java    # Report configuration
-└── 📂 target/                       # Build artifacts and reports
-    ├── 📄 ExtentReport.html         # Test execution report
-    ├── 📂 screenshots/              # Failure screenshots
-    └── 📂 surefire-reports/         # TestNG XML reports
+├── README.md                    # Project documentation
+├── docker-compose.yml           # Selenium Grid configuration
+├── Jenkinsfile                  # CI/CD pipeline definition
+├── pom.xml                      # Maven dependencies
+├── testng.xml                   # TestNG suite configuration
+├── src/
+│   ├── main/java/com/testing/
+│   │   └── App.java              # Main application class
+│   └── test/java/com/testing/
+│       ├── SwagLabsTest.java     # Test scenarios
+│       └── ExtentManager.java    # Report configuration
+└── target/                       # Build artifacts and reports
+    ├── ExtentReport.html         # Test execution report
+    ├── screenshots/              # Failure screenshots
+    └── surefire-reports/         # TestNG XML reports
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Docker Compose Configuration
 The `docker-compose.yml` file defines:
@@ -169,7 +169,7 @@ Key dependencies include:
 - ExtentReports 5.0.9
 - Commons IO 2.15.1
 
-## 🎯 Running Tests
+## Running Tests
 
 ### Local Execution
 
@@ -199,7 +199,7 @@ mvn test -DsuiteXmlFile=testng.xml
 
 ### Available Test Scenarios
 
-#### 🧪 Test Cases
+#### Test Cases
 1. **Valid Login & Add to Cart**
    - Login with valid credentials
    - Add product to cart
@@ -213,7 +213,7 @@ mvn test -DsuiteXmlFile=testng.xml
 - **Grid Console**: http://localhost:4444
 - **Node Status**: Check available browsers and sessions
 
-## 🔄 CI/CD Pipeline
+## CI/CD Pipeline
 
 The Jenkins pipeline (`Jenkinsfile`) includes:
 
@@ -226,10 +226,10 @@ The Jenkins pipeline (`Jenkinsfile`) includes:
 6. **Archive Reports** - Stores test reports and screenshots
 
 ### Pipeline Features:
-- ✅ **Automated cleanup** before and after tests
-- 📊 **Report publishing** with ExtentReports
-- 📸 **Screenshot archival** for failed tests
-- 🔔 **Status notifications** (success/failure)
+- **Automated cleanup** before and after tests
+- **Report publishing** with ExtentReports
+- **Screenshot archival** for failed tests
+- **Status notifications** (success/failure)
 
 ### Jenkins Setup:
 ```groovy
@@ -243,7 +243,7 @@ pipeline {
 }
 ```
 
-## 📊 Reports
+## Reports
 
 ### ExtentReports Features:
 - **Test execution summary**
@@ -259,14 +259,14 @@ pipeline {
 
 ### Sample Report Sections:
 ```
-📈 Dashboard
-├── 📊 Test Statistics
-├── 🕒 Execution Timeline  
-├── 🌐 Browser Distribution
-└── ❌ Failure Analysis
+Dashboard
+├── Test Statistics
+├── Execution Timeline  
+├── Browser Distribution
+└── Failure Analysis
 ```
 
-## 🐳 Docker Setup
+## Docker Setup
 
 ### Container Configuration:
 
@@ -306,7 +306,7 @@ docker-compose down -v
 docker system prune -f
 ```
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues and Solutions:
 
@@ -355,7 +355,7 @@ mvn test -Dorg.slf4j.simpleLogger.defaultLogLevel=debug
 mvn test -Dselenium.logging.level=DEBUG
 ```
 
-## 🤝 Contributing
+## Contributing
 
 ### Development Workflow:
 1. **Fork** the repository
@@ -376,15 +376,15 @@ mvn test -Dselenium.logging.level=DEBUG
 - [ ] Documentation updated
 - [ ] Screenshots for UI changes
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Authors
+## Authors
 
 - **Shrinidhi** - *Initial work* - [Shrinidhi972004](https://github.com/Shrinidhi972004)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Selenium** team for the excellent WebDriver framework
 - **Docker** for containerization capabilities  
@@ -392,15 +392,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **ExtentReports** for comprehensive reporting
 - **Jenkins** for CI/CD automation
 
-## 📞 Support
+## Support
 
 For support and questions:
-- 📧 **Email**: Create an issue in the repository
-- 📚 **Documentation**: Check the wiki section
-- 💬 **Discussions**: Use GitHub discussions
+- **Email**: Create an issue in the repository
+- **Documentation**: Check the wiki section
+- **Discussions**: Use GitHub discussions
 
 ---
 
-⭐ **Star this repository** if you find it helpful!
+**Star this repository** if you find it helpful!
 
-🔗 **Repository**: [Scalable-Test-Automation-Platform-using-Selenium-Grid-and-Docker](https://github.com/Shrinidhi972004/Scalable-Test-Automation-Platform-using-Selenium-Grid-and-Docker)
+**Repository**: [Scalable-Test-Automation-Platform-using-Selenium-Grid-and-Docker](https://github.com/Shrinidhi972004/Scalable-Test-Automation-Platform-using-Selenium-Grid-and-Docker)

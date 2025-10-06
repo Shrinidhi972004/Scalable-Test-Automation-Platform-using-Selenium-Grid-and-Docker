@@ -49,7 +49,7 @@ public class SwagLabsTest {
         WebElement cartItem = driver.findElement(By.className("inventory_item_name"));
         Assert.assertEquals(cartItem.getText(), "Sauce Labs Backpack");
 
-        test.log(Status.PASS, "Valid login and cart verification passed ✅");
+        test.log(Status.PASS, "Valid login and cart verification passed");
     }
 
     @Test(priority = 2)
@@ -65,7 +65,7 @@ public class SwagLabsTest {
         Assert.assertTrue(errorMsg.getText().contains("Epic sadface"),
                 "Expected error message not displayed!");
 
-        test.log(Status.PASS, "Invalid login displayed error correctly ❌");
+        test.log(Status.PASS, "Invalid login displayed error correctly");
     }
 
     @AfterMethod
@@ -74,9 +74,9 @@ public void captureScreenshot(ITestResult result) {
 
     if (result.getStatus() == ITestResult.FAILURE) {
         test.log(Status.FAIL, "FAILED: " + result.getThrowable());
-        takeScreenshot(testName); // only for FAIL
+        takeScreenshot(testName);
     } else if (result.getStatus() == ITestResult.SUCCESS) {
-        test.log(Status.PASS, "PASSED ✅");
+        test.log(Status.PASS, "PASSED");
     } else {
         test.log(Status.SKIP, "SKIPPED");
     }
